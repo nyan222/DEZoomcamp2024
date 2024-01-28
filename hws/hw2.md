@@ -197,4 +197,5 @@ def export_data(data, *args, **kwargs):
     )
     
 ```
+<img width="1016" alt="bckt" src="https://github.com/nyan222/DEZoomcamp2024/assets/47917537/c02a7734-83c0-48ad-bdea-9d831f67f719">
 
