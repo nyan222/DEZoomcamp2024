@@ -199,3 +199,10 @@ def export_data(data, *args, **kwargs):
 ```
 <img width="1016" alt="bckt" src="https://github.com/nyan222/DEZoomcamp2024/assets/47917537/c02a7734-83c0-48ad-bdea-9d831f67f719">
 
+
+
+##SCHEDULE
+
+<img width="653" alt="schd" src="https://github.com/nyan222/DEZoomcamp2024/assets/47917537/e6dcdb43-7881-4ea9-bea9-6dc80e58917c">
+
+
