@@ -65,10 +65,10 @@ def test_output(output, *args) -> None:
     """
     assert output is not None, 'The output is undefined'
 ```
-
-
-
-
+<br>
+<br>
+<br>
+<br>
 ##TRANSFORMER transform_green_taxi
 
 ```python
@@ -111,10 +111,10 @@ def test_output(output, *args) -> None:
     assert output['trip_distance'].isin([0]).sum() == 0, 'There are rides with zero trip distance'
     assert 'vendor_id' in output, 'There is no column "vendor_id"'
 ```
-
-
-
-
+<br>
+<br>
+<br>
+<br>
 ##DATA EXPORTER taxi_data_to_postgres
 
 ```python
@@ -151,19 +151,19 @@ def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
         )
 
 ```
-
-
-
-
+<br>
+<br>
+<br>
+<br>
 ##DATA LOADER check_postgres
 
 ```sql
 select distinct vendor_id from mage.green_taxi;
 ```
-
-
-
-
+<br>
+<br>
+<br>
+<br>
 ##DATA EXPORTER taxi_data_to_gcs_partitioned_parquet
 
 ```python
@@ -199,10 +199,13 @@ def export_data(data, *args, **kwargs):
 ```
 <img width="1016" alt="bckt" src="https://github.com/nyan222/DEZoomcamp2024/assets/47917537/c02a7734-83c0-48ad-bdea-9d831f67f719">
 
-
-
+<br>
+<br>
+<br>
+<br>
 ##SCHEDULE
-
+<br>
+<br>
 <img width="653" alt="schd" src="https://github.com/nyan222/DEZoomcamp2024/assets/47917537/e6dcdb43-7881-4ea9-bea9-6dc80e58917c">
 
 
