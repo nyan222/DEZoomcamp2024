@@ -123,8 +123,7 @@ default:
     source: trino-cli                         # Optional
     user: admin
     verify: /path/to/your/ca.crt              # Optional
-
-    dev:
+dev:
   # PostgresSQL
   POSTGRES_CONNECT_TIMEOUT: 10
   POSTGRES_DBNAME: "{{ env_var('POSTGRES_DBNAME') }}"

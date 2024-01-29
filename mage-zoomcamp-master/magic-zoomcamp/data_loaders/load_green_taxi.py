@@ -39,10 +39,9 @@ def load_data_from_api(*args, **kwargs):
     # native date parsing 
     parse_dates = ['lpep_pickup_datetime', 'lpep_dropoff_datetime']
 
-    dt = ['10','11','12']
     lst = []
 
-    for i in dt:
+    for i in range(10,13):
         url = "https://github.com/DataTalksClub/nyc-tlc-data/releases/download/green/green_tripdata_2020-{0}.csv.gz".format(i)
         print(url)
         df = pd.read_csv(
