@@ -9,6 +9,6 @@
 __pycache__/
 docker-compose.override.yml
 logs/
-mage-ai.db
+#mage-ai.db
 mage_data/
 secrets/
