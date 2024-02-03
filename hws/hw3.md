@@ -82,7 +82,7 @@ OPTIONS (
 );
 ```
 
-##1.
+## 1.
 ```sql
 -- hw3 q1
 SELECT count(*) cnt FROM nytaxi.external_green_taxi_2022; 
@@ -90,7 +90,7 @@ SELECT count(*) cnt FROM nytaxi.green_taxi_222_non_partitoned;
 -- ++ see Details of green_taxi_222_non_partitoned table 840 402
 ```
 
-##2.
+## 2.
 ```sql
 -- hw3 q2
 -- Query scans 0 B
@@ -100,7 +100,7 @@ SELECT count(distinct PULocationID) cnt FROM nytaxi.green_taxi_222_non_partitone
 ```
 
 
-##3.
+## 3.
 ```sql
 -- hw3 q3
 SELECT count(*) cnt FROM nytaxi.external_green_taxi_2022 where fare_amount = 0;
@@ -108,7 +108,7 @@ SELECT count(*) cnt FROM nytaxi.green_taxi_222_non_partitoned where fare_amount 
 --1622
 ```
 
-##4.
+## 4.
 ```sql
 -- hw3 q4
 CREATE OR REPLACE TABLE nytaxi.green_taxi_222_partitoned_clustered
@@ -117,7 +117,7 @@ CLUSTER BY PUlocationID AS
 SELECT * FROM nytaxi.external_green_taxi_2022;
 ```
 
-##5.
+## 5.
 ```sql
 -- hw3 q5
 --Query scans 12.82 MB
@@ -130,16 +130,16 @@ FROM nytaxi.nytaxi.green_taxi_222_partitoned_clustered
 WHERE DATE(lpep_pickup_datetime) BETWEEN DATE('2022-06-01') AND DATE('2022-06-30');
 ```
 
-##6.
+## 6.
 ```sql
 uris = [gs://ny_taxi_222/green/green_tripdata_2022-*.parquet]
 ```
 
-##7.
-We never know profit of clustering before execution
+## 7.
+We never know profit of clustering before execution<br>
 There is no profit for tables less then 1 GB
 
-##8.
+## 8.
 ```sql
 --Query scans 0 B
 SELECT count(*) cnt FROM nytaxi.green_taxi_222_non_partitoned; 
