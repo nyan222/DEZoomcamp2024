@@ -1,4 +1,4 @@
-##1
+## 1
 ```python
 def square_root_generator(limit):
     n = 1
@@ -20,7 +20,7 @@ for sqrt_value in generator:
         print('limit 5 sum_gen = ' + str(sum_gen))
 ```
 
-##2
+## 2
 ```python
 def square_root_generator(limit):
     n = 1
@@ -42,7 +42,7 @@ for sqrt_value in generator:
         #print('limit 5 sum_gen = ' + str(sum_gen))
 ```
 
-##Prereq
+## Prereq
 ```python
 def people_1():
     for i in range(1, 6):
@@ -62,7 +62,7 @@ for person in people_2():
 ```
 
 
-##3
+## 3
 ```python
 import dlt
 
@@ -105,7 +105,7 @@ print(sum_age)
 print(f"\n\nSum of ages from people_1 and people_2 generators is : {sum_age['s'].iloc[0].astype(int)}")
 ```
 
-##4
+## 4
 ```python
 pm_pipeline = dlt.pipeline(destination='duckdb', dataset_name='people_merged')
 
