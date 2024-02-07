@@ -132,6 +132,17 @@ dev:
   POSTGRES_PASSWORD: "{{ env_var('POSTGRES_PASSWORD') }}"
   POSTGRES_HOST: "{{ env_var('POSTGRES_HOST') }}"
   POSTGRES_PORT: "{{ env_var('POSTGRES_PORT') }}"
+  #POSTGRES_CONNECTION_METHOD: direct
   # Google
   GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/home/src/cfk.json"
   GOOGLE_LOCATION: us-west1 # Optional
+
+other_docker:
+  # PostgresSQL
+  POSTGRES_CONNECT_TIMEOUT: 10
+  POSTGRES_DBNAME: ny_taxi
+  POSTGRES_SCHEMA: public # Optional
+  POSTGRES_USER: root
+  POSTGRES_PASSWORD: root
+  POSTGRES_HOST: host.docker.internal
+  POSTGRES_PORT: 5433
