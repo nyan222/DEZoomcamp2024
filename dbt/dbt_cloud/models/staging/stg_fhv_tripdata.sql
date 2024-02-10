@@ -18,12 +18,12 @@ select
 from {{ source('staging','fhv_tripdata') }}
 )
 select * from t
---where extract(year from pickup_datetime) = 2019
-where {{ dbt_date.date_part("year", "pickup_datetime") }} = 2019
+where extract(year from pickup_datetime) = 2019
+--where {{ dbt_date.date_part("year", "pickup_datetime") }} = 2019
 
 -- dbt build --m <model.sql> --var 'is_test_run: false'
-{% if var('is_test_run', default=true) %}
+--{% if var('is_test_run', default=true) %}
 
-  limit 100
+  --limit 100
 
-{% endif %}
+--{% endif %}
