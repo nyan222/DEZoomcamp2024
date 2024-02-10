@@ -4,7 +4,6 @@ services:
     build:
       context: .
       target: dbt-all
-      build-arg: build_for=linux/arm64
     image: dbt/all
     volumes:
       - ~/Downloads/DEZoomcamp2024:/usr/app
