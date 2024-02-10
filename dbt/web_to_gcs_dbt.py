@@ -93,8 +93,10 @@ def web_to_gcs(year, service):
         
         ##df = pd.read_parquet(file_name)
         file_name = file_name.replace('.csv.gz', '.parquet')######
-        df.to_parquet(file_name, engine='pyarrow')###
+        df.to_parquet(file_name, engine='pyarrow',coerce_timestamps="ms",allow_truncated_timestamps=True)###
+        #df.to_csv(file_name)###
         print(f"Parquet: {file_name}")
+        #print(f"CSV: {file_name}")
 
         # upload it to gcs 
         upload_to_gcs(BUCKET, f"{service}/{file_name}", file_name)

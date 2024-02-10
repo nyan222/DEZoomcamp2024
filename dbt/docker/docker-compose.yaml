@@ -1,0 +1,13 @@
+version: '3'
+services:
+  dbt-all:
+    build:
+      context: .
+      target: dbt-all
+      build-arg: build_for=linux/arm64
+    image: dbt/all
+    volumes:
+      - ~/Downloads/DEZoomcamp2024:/usr/app
+      - ~/.dbt/:/root/.dbt/
+      - ~/Downloads/DEZoomcamp2024/dbt/docker/cfk.json:/.google/credentials/google_credentials.json
+    network_mode: host
