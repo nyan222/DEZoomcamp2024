@@ -5,18 +5,21 @@ Create a staging model for the fhv data, similar to the ones made for yellow and
 Add an additional filter for keeping only records with pickup time in year 2019. 
 Do not add a deduplication step. Run this models without limits (is_test_run: false). 
 */
-
+with t as (
 select
     -- identifiers
 	dispatching_base_num,
-    cast(pickup_datetime as timestamp) as pickup_datetime,
-    cast(dropoff_datetime as timestamp) as dropoff_datetime,
-    cast(pulocationid as integer) as  pickup_locationid,
-    cast(dolocationid as integer) as dropoff_locationid,
+    cast(pickup_datetime  as timestamp) as pickup_datetime,
+    cast(dropOff_datetime as timestamp) as dropoff_datetime,
+    cast(PUlocationid as integer) as  pickup_locationid,
+    cast(DOlocationid as integer) as dropoff_locationid,
     SR_Flag, 
     Affiliated_base_number
 from {{ source('staging','fhv_tripdata') }}
-where extract(year from cast(pickup_datetime as timestamp)) = '2019'
+)
+select * from t
+--where extract(year from pickup_datetime) = 2019
+where {{ dbt_date.date_part("year", "pickup_datetime") }} = 2019
 
 -- dbt build --m <model.sql> --var 'is_test_run: false'
 {% if var('is_test_run', default=true) %}
