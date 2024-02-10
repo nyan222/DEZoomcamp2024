@@ -172,4 +172,5 @@ models:
 
       - name: Affiliated_base_number
         data_type: string
-        description: ""        
+        description: ""  
+              
