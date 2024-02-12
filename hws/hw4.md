@@ -213,17 +213,19 @@ for service in ['yellow','green','fhv']:
 
 ## dbt projects
 
-# A
+### A
 [dbt_cloud](https://github.com/nyan222/DEZoomcamp2024/dbt/dbt_cloud)
 
-# A Dashboard
-[Looker Studio Dashboard](https://lookerstudio.google.com/s/vthjwqclYXs)
+### A Dashboard
+[Looker Studio Dashboard](https://lookerstudio.google.com/s/vthjwqclYXs)<br>
+[NY_Taxi.pdf](https://github.com/nyan222/DEZoomcamp2024/files/14251634/NY_Taxi.pdf)
 
 
-# B
+### B
 [dbt_cloud](https://github.com/nyan222/DEZoomcamp2024/dbt/dbt_postgres)
 
-# B Dashboard
+### B Dashboard
+[All Trips.pdf](https://github.com/nyan222/DEZoomcamp2024/files/14251631/All.Trips.pdf)
 
 
 ## SQL for the question: "What is the count of records in the model fact_fhv_trips after running all dependencies with the test run variable disabled (:false)?"
