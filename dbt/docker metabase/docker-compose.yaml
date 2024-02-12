@@ -1,0 +1,10 @@
+services:
+  metabase:
+    image: metabase/metabase:latest
+    environment:
+      - MB_DB_FILE=/metabase-data/metabase.db
+    volumes:
+      - "/Users/stealth_shadow/Applications/dbs/metabase/metabase-data:/metabase-data:rw"
+    ports:
+      - "3000:3000"
+  
