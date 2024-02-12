@@ -222,7 +222,9 @@ for service in ['yellow','green','fhv']:
 
 
 ### B
-[dbt_cloud](https://github.com/nyan222/DEZoomcamp2024/tree/main/dbt/dbt_postgres)
+[dbt_postgres](https://github.com/nyan222/DEZoomcamp2024/tree/main/dbt/dbt_postgres)
+
+P.S. Nice thing to try postgres and dbt cloud and Looker Studio is [NeonTech](https://neon.tech), but free tier has only 3GB storage, may be useful for a very small project
 
 ### B Dashboard
 [All Trips.pdf](https://github.com/nyan222/DEZoomcamp2024/files/14251631/All.Trips.pdf)
