@@ -214,7 +214,7 @@ for service in ['yellow','green','fhv']:
 ## dbt projects
 
 ### A
-[dbt_cloud](https://github.com/nyan222/DEZoomcamp2024/dbt/dbt_cloud)
+[dbt_cloud](https://github.com/nyan222/DEZoomcamp2024/tree/main/dbt/dbt_cloud)
 
 ### A Dashboard
 [Looker Studio Dashboard](https://lookerstudio.google.com/s/vthjwqclYXs)<br>
@@ -222,7 +222,7 @@ for service in ['yellow','green','fhv']:
 
 
 ### B
-[dbt_cloud](https://github.com/nyan222/DEZoomcamp2024/dbt/dbt_postgres)
+[dbt_cloud](https://github.com/nyan222/DEZoomcamp2024/tree/main/dbt/dbt_postgres)
 
 ### B Dashboard
 [All Trips.pdf](https://github.com/nyan222/DEZoomcamp2024/files/14251631/All.Trips.pdf)
