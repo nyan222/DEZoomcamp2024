@@ -230,7 +230,8 @@ P.S. Nice thing to try postgres and dbt cloud and Looker Studio is [NeonTech](ht
 [All Trips.pdf](https://github.com/nyan222/DEZoomcamp2024/files/14251631/All.Trips.pdf)
 
 
-## SQL for the question: "What is the count of records in the model fact_fhv_trips after running all dependencies with the test run variable disabled (:false)?"
+## SQL for the question: 
+"What is the count of records in the model fact_fhv_trips after running all dependencies with the test run variable disabled (:false)?"
 ```sql
 select count(*) cnt from production.fact_fhv_trips
 ```
