@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dm_yearly_avg_word_count
+    description: average word count per year, 2024 - for all years
+    columns:
+      - name: year
+      - name: avg_word_count
+        description: value
+
+  - name: dm_yearly_sentiment_count
+    description: count sentiment per year, 2024 - for all years
+    columns:
+      - name: year
+      - name: sentiment
+      - name: sentiment_count
+        description: value 
+
+  - name: fact_roman_count
+    description: count articles by type all/roman
+    columns:
+      - name: year
+      - name: article_type
+      - name: article_count
+        description: value           
+      
+  - name: fact_roman_news
+    description: a very simple table
+    columns:
+      - name: uid
+        data_type: string
+        description: "unique identifier conformed by the combination of id+date+page"
+
+      - name: word_count
+        data_type: int64
+        description: ""
+
+      - name: text
+        data_type: string
+        description: ""
+
+      - name: year
+        data_type: int64
+        description: ""
+
+      - name: sentiment
+        data_type: string
+        description: ""

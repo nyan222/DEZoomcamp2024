@@ -1,0 +1,58 @@
+version: 2
+
+sources:
+  - name: staging
+    database:
+      coral-firefly-411510
+      # For postgres:
+      #database: production
+    schema:
+      roman_raw
+
+      # loaded_at_field: record_loaded_at
+    tables:
+      - name:
+          roman_sent
+          # freshness:
+          # error_after: {count: 6, period: hour}
+      - name:
+          roman_count   
+      
+
+models:
+  - name: stg_roman_sent
+    description: >
+      NewsPapers articles, than have mentioned Roman Empire, with sentiment analysis
+    columns:
+      - name: uid
+        description: Primary key for this table, generated with a concatenation of id+date+page
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+              severity: warn
+      - name: id
+        description: >
+          Not unique id - id of the file in the library
+      - name: date
+        description: The date of the article
+      - name: edition
+        description: possible it's a version of file
+      - name: page
+        description: that's should be a page in source, but we have not source's name:( only file_name
+      - name: file_name
+        description: The full name of the file in the library
+      - name: word_count
+        description: words in the text
+      - name: text
+        description: The article itself
+      - name: year
+        description: The year of the article
+      - name: sent
+        description: sentiment analysis
+  - name: stg_roman_count
+    description: count articles per year
+    columns:
+      - name: year
+      - name: all_articles
+      - name: roman_articles 

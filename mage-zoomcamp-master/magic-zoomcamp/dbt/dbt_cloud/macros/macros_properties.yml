@@ -1,0 +1,10 @@
+version: 2
+
+macros:
+  - name: get_sentiment
+    description: >
+      This macro receives a short sent and returns the sentiment.
+    arguments:
+      - name: sent
+        type: string
+        

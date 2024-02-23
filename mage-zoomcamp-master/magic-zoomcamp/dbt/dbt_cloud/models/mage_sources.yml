@@ -1,0 +1,13 @@
+sources:
+- description: Dataframes Mage upstream blocks
+  loader: mage
+  name: mage_dbt_cloud
+  schema: roman_dbt_prod
+  tables:
+  - description: Dataframe for block `save_sent_news` of the `news_to_bq` mage pipeline.
+    identifier: mage_news_to_bq_save_sent_news
+    meta:
+      block_uuid: save_sent_news
+      pipeline_uuid: news_to_bq
+    name: news_to_bq_save_sent_news
+version: 2
