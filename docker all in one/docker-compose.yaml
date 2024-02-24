@@ -24,6 +24,7 @@ services:
       - "/Users/stealth_shadow/Applications/dbs/jupyter/work:/home/jovyan/work:rw"  
     ports:
       - "8889:8888"
+      - "4040:4040"
   magic:
     image: mageai/mageai:latest
     command: mage start ${PROJECT_NAME}
